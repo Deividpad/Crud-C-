@@ -1,0 +1,69 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Batallón</title>
+
+<link rel="stylesheet" href="layout/css/bootstrap.min.css" />
+<link rel="stylesheet" href="layout/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="layout/css/uniform.css" />
+<link rel="stylesheet" href="layout/css/select2.css" />
+<link rel="stylesheet" href="layout/css/matrix-style.css" />
+<link rel="stylesheet" href="layout/css/matrix-media.css" />
+<link rel="stylesheet" href="layout/css/bootstrap-wysihtml5.css" />
+<link href="layout/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<!-- ##################################################### MENU ################################################## -->
+<!--Header-part-->
+<div id="header">
+  <h1 ><a href="FrmListarSoldados.aspx" style="color: cadetblue;">Batallón</a></h1>
+    <h5>de alta montaña</h5>
+</div>
+<!--close-Header-part--> 
+
+<!--sidebar-menu-->
+<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-list"></i>Forms</a>
+  <ul>
+    <li><a href="FrmRegistrarCompania.aspx"><i class="icon icon-inbox"></i> <span>Compañía</span></a> </li>
+    <li><a href="CuartelVista.aspx"><i class="icon icon-th"></i> <span>Cuartel</span></a></li>
+    <li><a href="FrmRegistrarCuerpo.aspx"><i class="icon icon-fullscreen"></i> <span>Cuerpo</span></a></li>
+    <li class="submenu active"> <a href="#"><i class="icon icon-list"></i> <span>Soldado</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li><a href="FrmRegistrarSoldado.aspx">Registrar</a></li>
+        <li><a href="FrmListarSoldados.aspx">Listar</a></li>
+      </ul>
+    </li>        
+  </ul>
+</div>
+<!--close-sidebar-menu-->
+
+
+
+<!-- ################################################### CONTENT #################################################### -->
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+<!-- ########################################### FOOTER ############################################################ -->
+<div class="row-fluid">
+  <div id="footer" class="span12"> Batallón &copy; de alta montaña</div>
+</div>
+<script type="text/javascript" src="layout/js/jquery.min.js"></script> 
+<script type="text/javascript" src="layout/js/jquery.ui.custom.js"></script> 
+<script type="text/javascript" src="layout/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="layout/js/jquery.uniform.js"></script> 
+<script type="text/javascript" src="layout/js/select2.min.js"></script>
+<script type="text/javascript" src="layout/js/matrix.js"></script>       
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('select').select2();  
+    });  
+</script>
+    </form>
+</body>
+</html>
